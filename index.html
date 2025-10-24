@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deathly Apparel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Deathly Apparel — dark, high-quality streetwear." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="IMG_9218.jpeg" alt="Deathly Apparel logo" class="logo-crop" />
+        <span class="brand-text">Deathly Apparel</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="nav">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner container">
+        <h1>Deathly Apparel</h1>
+        <p>Dark designs. Limited drops. Premium materials.</p>
+        <a class="btn" href="#shop">Shop Now</a>
+      </div>
+    </section>
+
+    <section id="shop" class="container section">
+      <h2>Featured</h2>
+      <div class="products">
+        <article class="product">
+          <img src="IMG_9212.jpeg" alt="Featured product 1" />
+          <h3>Signature Tee</h3>
+          <p class="price">$28.00</p>
+          <p class="desc">Soft cotton tee with embroidered logo.</p>
+          <div class="actions">
+            <a class="btn btn-outline" href="mailto:orders@example.com?subject=Order%20Signature%20Tee">Order</a>
+          </div>
+        </article>
+
+        <article class="product">
+          <img src="IMG_9218.jpeg" alt="Featured product 2" />
+          <h3>Midnight Hoodie</h3>
+          <p class="price">$55.00</p>
+          <p class="desc">Cozy midweight hoodie with screen print.</p>
+          <div class="actions">
+            <a class="btn btn-outline" href="mailto:orders@example.com?subject=Order%20Midnight%20Hoodie">Order</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <h2>About</h2>
+      <p>Deathly Apparel blends dark aesthetic with street-ready comfort. Limited runs — follow our socials for drop announcements.</p>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:hello@deathlyapparel.example">hello@deathlyapparel.example</a></p>
+      <form id="contact-form" class="contact-form" action="mailto:hello@deathlyapparel.example" method="post" enctype="text/plain">
+        <label>
+          Name
+          <input name="name" required />
+        </label>
+        <label>
+          Email
+          <input name="email" type="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Deathly Apparel — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
