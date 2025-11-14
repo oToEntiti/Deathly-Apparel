@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deathly Apparel | Dark Streetwear</title>
+  <meta name="description" content="Limited-run dark aesthetic tees, hoodies, and streetwear. Hand-dyed. One of one.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Deathly Apparel Logo">
+        <span>Deathly Apparel</span>
+      </a>
+      <nav class="nav">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <h1>Deathly Apparel</h1>
+      <p class="tagline">Hand-dyed. One of one. Born in chaos.</p>
+      <a href="#shop" class="btn btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="shop" class="section container">
+    <h2>Featured Drops</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="assets/shirt1.jpg" alt="Pink/Black Chaos Tee" loading="lazy">
+        <div class="card-body">
+          <h3>Chaos Tee (Pink/Black)</h3>
+          <p class="price">$35</p>
+          <p>Hand-dyed cotton. Unique chaos pattern.</p>
+          <a href="mailto:orders@deathlyapparel.com?subject=Order: Chaos Tee (Pink/Black)&body=Size: " class="btn btn-outline">Order</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/shirt2.jpg" alt="Blood Red Hoodie" loading="lazy">
+        <div class="card-body">
+          <h3>Blood Hoodie (Red/Black)</h3>
+          <p class="price">$65</p>
+          <p>Midweight fleece with ritual print.</p>
+          <a href="mailto:orders@deathlyapparel.com?subject=Order: Blood Hoodie&body=Size: " class="btn btn-outline">Order</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/shirt3.jpg" alt="Blue Abyss Tee" loading="lazy">
+        <div class="card-body">
+          <h3>Abyss Tee (Blue/Black)</h3>
+          <p class="price">$35</p>
+          <p>Deep void-inspired dye work.</p>
+          <a href="mailto:orders@deathlyapparel.com?subject=Order: Abyss Tee&body=Size: " class="btn btn-outline">Order</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="assets/shirt4.jpg" alt="Monochrome Death Tee" loading="lazy">
+        <div class="card-body">
+          <h3>Death Tee (B&W)</h3>
+          <p class="price">$30</p>
+          <p>Classic brutalist design.</p>
+          <a href="mailto:orders@deathlyapparel.com?subject=Order: Death Tee&body=Size: " class="btn btn-outline">Order</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <h2>About</h2>
+    <p>Deathly Apparel crafts limited-edition streetwear through hand-dyed processes and dark aesthetics. Each piece is unique, drawing from themes of chaos and eternity. Follow for exclusive drop announcements.</p>
+  </section>
+
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hello@deathlyapparel.com">hello@deathlyapparel.com</a></p>
+    <form id="contact-form" action="mailto:hello@deathlyapparel.com" method="post" enctype="text/plain">
+      <label for="name">Name: <input type="text" id="name" name="name" required></label>
+      <label for="email">Email: <input type="email" id="email" name="email" required></label>
+      <label for="message">Message: <textarea id="message" name="message" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Deathly Apparel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    document.querySelector('.mobile-toggle').addEventListener('click', () => {
+      document.querySelector('.nav').classList.toggle('active');
+    });
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
